@@ -156,7 +156,8 @@ section.band .wrap { display: grid; gap: 24px; }
 .city .go { color: var(--tape); font-weight: 700; }
 
 /* City page */
-.installer { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 28px; align-items: center; }
+.installer { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: center; }
+.installer:has(.photo) { grid-template-columns: 220px minmax(0, 1fr); }
 .photo {
   aspect-ratio: 4 / 5; max-width: 100%; border-radius: var(--radius); overflow: hidden;
   background: var(--tape-soft); display: grid; place-items: center; text-align: center;
@@ -187,7 +188,7 @@ section.band .wrap { display: grid; gap: 24px; }
   .hero-art svg { max-width: 320px; margin: 0 auto; }
   .price { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .steps { grid-template-columns: minmax(0, 1fr); }
-  .installer { grid-template-columns: minmax(0, 1fr); }
+  .installer, .installer:has(.photo) { grid-template-columns: minmax(0, 1fr); }
   .installer .photo { max-width: 240px; }
 }
 @media (prefers-reduced-motion: no-preference) {
